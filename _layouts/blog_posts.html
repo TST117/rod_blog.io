@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  {% include head.html %}
+  <body>
+    {% include nav.html %}
+    <div class = "site_posts_container">
+      {% for post in site.posts limit:6 %}
+      <div class = "site_post_card">
+      <a href="#">
+        <div class = "site_post_title">{{post.title}}</div>
+        <div class = "site_post_thumbnail">{{post.thumbnail}}</div>
+        <p>{{post.description}}</p>
+      </a>
+    </div>
+      {% endfor %}
+    </div>
+    {% include footer.html %}
+  </body>
+</html>

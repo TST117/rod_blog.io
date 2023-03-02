@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  {% include head.html %}
+  <body>
+    {% include nav.html %}
+      {% for post in site.posts limit:1 %}
+      {{post.content}}
+      {% endfor %}
+    {% include footer.html %}
+  </body>
+</html>
+
+
+<!-- {% for post in site.posts %}
+<li>
+    <a href="{{ post.url }}">{{ post.title }}</a>
+    <p>{{ post.description }}</p>
+</li>
+{% endfor %} -->
